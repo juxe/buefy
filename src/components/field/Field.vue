@@ -8,7 +8,9 @@
                 v-if="label"
                 :for="labelFor"
                 class="label" >
-                {{ label }}
+                <slot name="label">
+                    {{ label }}
+                </slot>
             </label>
         </div>
         <template v-else>
@@ -17,7 +19,9 @@
                 :for="labelFor"
                 :class="customClass"
                 class="label">
-                {{ label }}
+                <slot name="label">
+                    {{ label }}
+                </slot>
             </label>
         </template>
         <b-field-body
